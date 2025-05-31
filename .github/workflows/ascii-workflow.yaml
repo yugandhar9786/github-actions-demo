@@ -7,7 +7,7 @@ jobs:
             - name: checkout
               uses: actions/checkout@v2
             - name: executing shell-script
-              run: ./github/workflows/ascii.sh
+              run: ./github/workflows/ascii-script.sh.sh
               
             - name: list repo files
               run: ls -la
