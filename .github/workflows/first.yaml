@@ -1,0 +1,14 @@
+name: my-first cicd pipeline
+on: push
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: cicd pipeline
+              run: echo "hello, cicd pipeline"
+            - name: list the files
+              run: ls -la
+            - name: print current directory
+              run: pwd
+            - name: read file
+              run: cat README.md
