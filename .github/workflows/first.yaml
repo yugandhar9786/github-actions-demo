@@ -7,7 +7,7 @@ jobs:
             - name: cicd pipeline
               run: echo "hello, cicd pipeline"
             - name: checkout code
-              uses: actions@checkout@v2
+              uses: actions/checkout@v2
             - name: list the files
               run: ls -la
             - name: print current directory
