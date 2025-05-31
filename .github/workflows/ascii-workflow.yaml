@@ -1,0 +1,20 @@
+name: ascii-generation workflow
+on: push
+jobs:
+    ascii_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v2
+            - name: install cowsay
+              run: sudo apt-get install -y cowsay
+            - name: execute cowsay CMD
+              run: cowsay -f dragon "Run for a cover. I am a dragon!" >> dragon.txt
+            - name: test the file exists
+              run: grep -i "dragon" dragon.txt
+            - name: read the file
+              run: cat dragon.txt
+            - name: list repo files
+              run: ls -la
+              
+            
